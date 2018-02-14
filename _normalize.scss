@@ -12,11 +12,11 @@ html {
 }
 
 body {
-    background: $background;
-    color: $color;
-    font-family: $font-family;
-    font-size: $font-size;
-    line-height: $line-height;
+    background: $m-background;
+    color: $m-color;
+    font-family: $m-font-family;
+    font-size: $m-font-size;
+    line-height: $m-line-height;
     margin: 0;
     padding: 0;
 }
@@ -25,7 +25,7 @@ a {
     background-color: transparent;
     cursor: pointer;
     touch-action: manipulation;
-    transition: $transition;
+    transition: $m-transition;
     -ms-touch-action: manipulation;
     &:active,
     &:hover,
@@ -51,21 +51,21 @@ section {
 
 summary {
     display: list-item;
-    color: lighten($color, 40);
+    color: lighten($m-color, 40);
     cursor: pointer;
-    font-size: $font-size;
-    transition: $transition;
+    font-size: $m-font-size;
+    transition: $m-transition;
     &:focus,
     &:hover {
-        color: $color;
-        font-size: $font-size * 1.2;
+        color: $m-color;
+        font-size: $m-font-size * 1.2;
         outline: none;
     }
 }
 
 blockquote,
 figure {
-    margin: $line-height * 1.5;
+    margin: $m-line-height * 1.5;
 }
 
 figcaption {
@@ -100,12 +100,12 @@ ins {
 }
 
 abbr {
-    border-bottom: 1px dotted $color;
+    border-bottom: 1px dotted $m-color;
     cursor: help;
 }
 
 ins {
-    border-bottom: 1px dashed $color;
+    border-bottom: 1px dashed $m-color;
 }
 
 b,
@@ -142,7 +142,7 @@ kbd,
 pre,
 samp,
 var {
-    font-family: $code-family;
+    font-family: $m-code-family;
     font-size: 1em;
 }
 
@@ -155,7 +155,7 @@ pre {
 
 hr {
     border: none;
-    border-top: 1px solid $color;
+    border-top: 1px solid $m-color;
     box-sizing: content-box;
     height: 0;
     overflow: visible;
@@ -178,20 +178,20 @@ button,
 input,
 textarea,
 select {
-    font-size: $font-size;
+    font-size: $m-font-size;
     font-weight: normal;
     margin: .1em;
     padding: .4em .8em;
-    transition: $transition;
+    transition: $m-transition;
 }
 
 input,
 textarea,
 select {
-    border: 1px solid lighten($color, 50);
+    border: 1px solid lighten($m-color, 50);
     &:focus,
     &:hover {
-        border-color: $color;
+        border-color: $m-color;
         outline: none;
     }
 }
@@ -200,16 +200,16 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    background: $color;
-    border-color: $color;
-    color: $background;
+    background: $m-color;
+    border-color: $m-color;
+    color: $m-background;
     cursor: pointer;
     -webkit-appearance: button;
     &:focus,
     &:hover {
-        background: darken($color, 50);
-        border-color: darken($color, 100);
-        color: $background;
+        background: darken($m-color, 50);
+        border-color: darken($m-color, 100);
+        color: $m-background;
         outline: none;
     }
 }
@@ -223,7 +223,7 @@ select::-moz-focus-inner {
 }
 
 fieldset {
-    border: 1px solid $color;
+    border: 1px solid $m-color;
     margin: 0;
     padding: 0.35em 0.7em 0.7em;
 }
@@ -294,17 +294,17 @@ template {
 }
 
 ::-webkit-selection {
-    background-color: $color;
-    color: $background;
+    background-color: $m-color;
+    color: $m-background;
     text-shadow: none;
 }
 ::-moz-selection {
-    background-color: $color;
-    color: $background;
+    background-color: $m-color;
+    color: $m-background;
     text-shadow: none;
 }
 ::selection {
-    background-color: $color;
-    color: $background;
+    background-color: $m-color;
+    color: $m-background;
     text-shadow: none;
 }
