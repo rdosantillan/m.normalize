@@ -1,6 +1,7 @@
 # m.normalize
+
 Custom Normalize File for M projects under MIT License
----
+
 
 ## Tested and working on
 * Brave
@@ -8,6 +9,7 @@ Custom Normalize File for M projects under MIT License
 * Firefox
 * Opera
 * Safari
+
 
 ## Known Issues
 
