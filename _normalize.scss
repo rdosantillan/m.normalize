@@ -1,6 +1,8 @@
 /*
- *
+ * mNormalize v1.0.0
  * Custom Normalize File for M projects
+ * MIT License
+ * https://github.com/flkt-crnpio/m.normalize
  */
 @charset "UTF-8";
 @import "_vars";
@@ -25,8 +27,8 @@ a {
     background-color: transparent;
     cursor: pointer;
     touch-action: manipulation;
-    transition: $m-transition;
     -ms-touch-action: manipulation;
+    transition: $m-transition;
     &:active,
     &:hover,
     &:focus {
@@ -50,9 +52,9 @@ section {
 }
 
 summary {
-    display: list-item;
     color: lighten($m-color, 40);
     cursor: pointer;
+    display: list-item;
     font-size: $m-font-size;
     transition: $m-transition;
     &:focus,
@@ -180,7 +182,7 @@ textarea,
 select {
     font-size: $m-font-size;
     font-weight: normal;
-    margin: .1em;
+    margin: .1em 0;
     padding: .4em .8em;
     transition: $m-transition;
 }
@@ -188,7 +190,9 @@ select {
 input,
 textarea,
 select {
+    background: transparent;
     border: 1px solid lighten($m-color, 50);
+    border-radius: 1px;
     &:focus,
     &:hover {
         border-color: $m-color;
@@ -196,15 +200,27 @@ select {
     }
 }
 
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: textfield;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(-45deg, transparent 50%, gray 50%);
+    background-position: 90% 50%, calc(90% + 5px) 50%;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+    appearance: auto;
+    -moz-appearance: button;
+    -webkit-appearance: button;
     background: $m-color;
-    border-color: $m-color;
+    border: 1px solid $m-color;
     color: $m-background;
     cursor: pointer;
-    -webkit-appearance: button;
     &:focus,
     &:hover {
         background: darken($m-color, 50);
@@ -243,11 +259,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
+    appearance: auto;
+    -moz-appearance: textfield;
     -webkit-appearance: textfield;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
+    appearance: none;
+    -moz-appearance: none;
     -webkit-appearance: none;
 }
 
@@ -260,18 +280,19 @@ template {
     display: none;
 }
 
-[aria-busy="true"],
-.bussy {
+.bussy,
+[aria-busy="true"] {
     cursor: progress;
 }
 
-[aria-controls],
-.controls {
+
+.controls,
+[aria-controls] {
     cursor: pointer;
 }
 
-[aria-disabled],
 .disabled,
+[aria-disabled],
 [disabled],
 [disabled]:active,
 [disabled]:focus,
@@ -281,14 +302,14 @@ template {
     pointer-events: none;
 }
 
-[hidden],
-.hidden {
+.hidden,
+[hidden] {
     display: none;
     pointer-events: none;
 }
 
-[readonly],
-.readonly {
+.readonly,
+[readonly] {
     cursor: default;
     pointer-events: none;
 }
