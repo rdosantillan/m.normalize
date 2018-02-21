@@ -1,0 +1,23 @@
+{
+  "name": "m.normalize",
+  "version": "1.0.0",
+  "description": "normalize file for m projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flkt-crnpio/m.normalize.git"
+  },
+  "keywords": [
+    "normalize",
+    "css"
+  ],
+  "author": "flkt <flkt.crnpio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flkt-crnpio/m.normalize/issues"
+  },
+  "homepage": "https://github.com/flkt-crnpio/m.normalize#readme"
+}
