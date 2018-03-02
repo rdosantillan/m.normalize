@@ -15,9 +15,10 @@ body {
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 24px;
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -61,7 +62,7 @@ summary:focus, summary:hover {
 
 blockquote,
 figure {
-  margin: 2.25em;
+  margin: 36px;
 }
 
 figcaption {
@@ -203,7 +204,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: textfield;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(-45deg, transparent 50%, gray 50%);
-  background-position: 90% 50%, calc(90% + 5px) 50%;
+  background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 }
@@ -300,7 +301,7 @@ template {
 [disabled]:focus,
 [disabled]:hover {
   cursor: default;
-  opacity: 0.7;
+  opacity: 0.5;
   pointer-events: none;
 }
 
