@@ -4,7 +4,8 @@
   "description": "normalize file for m projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "sass --watch _normalize.scss:normalize.css --style expanded",
+    "build": "sass _normalize.scss:normalize.min.css --style compressed"
   },
   "repository": {
     "type": "git",
