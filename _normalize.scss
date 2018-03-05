@@ -166,7 +166,6 @@ hr {
 
 img {
     border-style: none;
-    max-width: 100%;
 }
 
 svg {
@@ -285,7 +284,6 @@ template {
 [aria-busy="true"] {
     cursor: progress;
 }
-
 
 .controls,
 [aria-controls] {
