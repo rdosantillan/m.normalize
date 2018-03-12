@@ -7,6 +7,13 @@
     "watch": "sass --watch _normalize.scss:normalize.css --style expanded",
     "build": "sass _normalize.scss:normalize.min.css --style compressed"
   },
+  "keywords": [
+    "mol",
+    "css",
+    "flkt-mol",
+    "scss-module",
+    "normalizer"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flkt-crnpio/m.normalize.git"
