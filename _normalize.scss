@@ -282,12 +282,12 @@ template {
 
 .bussy,
 [aria-busy="true"] {
-    cursor: progress !important;
+    cursor: progress;
 }
 
 .controls,
 [aria-controls] {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .disabled,
@@ -296,9 +296,9 @@ template {
 [disabled]:active,
 [disabled]:focus,
 [disabled]:hover {
-    cursor: default !important;
-    opacity: 0.5 !important;
-    pointer-events: none !important;
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .hidden,
