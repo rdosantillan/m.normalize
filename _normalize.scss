@@ -1,5 +1,5 @@
 /*
- * mNormalize v1.0.0
+ * mNormalize v1.1.0
  * Custom Normalize File for M projects
  * MIT License
  * https://github.com/flkt-crnpio/m.normalize
@@ -7,324 +7,651 @@
 @charset "UTF-8";
 @import "_vars";
 
-html {
-    box-sizing: border-box;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
+@if $m-prefix != null {
+  .#{$m-prefix}html {
+      box-sizing: border-box;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  }
 
-body {
-    background: $m-background;
-    color: $m-color;
-    font-family: $m-font-family;
-    font-size: $m-font-size;
-    line-height: $m-line-height;
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-}
+  .#{$m-prefix}body {
+      background: $m-background;
+      color: $m-color;
+      font-family: $m-font-family;
+      font-size: $m-font-size;
+      line-height: $m-line-height;
+      margin: 0;
+      padding: 0;
+      text-rendering: optimizeLegibility;
+  }
 
-a {
-    background-color: transparent;
-    cursor: pointer;
-    touch-action: manipulation;
-    -ms-touch-action: manipulation;
-    transition: $m-transition;
-    &:active,
-    &:hover,
-    &:focus {
-        outline-width: 0;
-    }
-}
+  .#{$m-prefix}a {
+      background-color: transparent;
+      cursor: pointer;
+      touch-action: manipulation;
+      -ms-touch-action: manipulation;
+      transition: $m-transition;
+      &:active,
+      &:hover,
+      &:focus {
+          outline-width: 0;
+      }
+  }
 
-article,
-aside,
-blockquote,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section {
-    display: block;
-}
+  .#{$m-prefix}article,
+  .#{$m-prefix}aside,
+  .#{$m-prefix}blockquote,
+  .#{$m-prefix}details,
+  .#{$m-prefix}figcaption,
+  .#{$m-prefix}figure,
+  .#{$m-prefix}footer,
+  .#{$m-prefix}header,
+  .#{$m-prefix}main,
+  .#{$m-prefix}menu,
+  .#{$m-prefix}nav,
+  .#{$m-prefix}section {
+      display: block;
+  }
 
-summary {
-    color: lighten($m-color, 40);
-    cursor: pointer;
-    display: list-item;
-    font-size: $m-font-size;
-    transition: $m-transition;
-    &:focus,
-    &:hover {
-        color: $m-color;
-        font-size: $m-font-size * 1.2;
-        outline: none;
-    }
-}
+  .#{$m-prefix}summary {
+      color: lighten($m-color, 40);
+      cursor: pointer;
+      display: list-item;
+      font-size: $m-font-size;
+      transition: $m-transition;
+      &:focus,
+      &:hover {
+          color: $m-color;
+          font-size: $m-font-size * 1.2;
+          outline: none;
+      }
+  }
 
-blockquote,
-figure {
-    margin: $m-line-height * 1.5;
-}
+  .#{$m-prefix}blockquote,
+  .#{$m-prefix}figure {
+      margin: $m-line-height * 1.5;
+  }
 
-figcaption {
-    font-size: .8em;
-}
+  .#{$m-prefix}figcaption {
+      font-size: .8em;
+  }
 
-audio,
-canvas,
-progress,
-video {
-    display: inline-block;
-}
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
+  .#{$m-prefix}audio,
+  .#{$m-prefix}canvas,
+  .#{$m-prefix}progress,
+  .#{$m-prefix}video {
+      display: inline-block;
+  }
+  .#{$m-prefix}audio:not([controls]) {
+      display: none;
+      height: 0;
+  }
 
-audio,
-canvas,
-iframe,
-video {
-    vertical-align: middle;
-}
+  .#{$m-prefix}audio,
+  .#{$m-prefix}canvas,
+  .#{$m-prefix}iframe,
+  .#{$m-prefix}video {
+      vertical-align: middle;
+  }
 
-progress {
-    vertical-align: baseline;
-}
+  .#{$m-prefix}progress {
+      vertical-align: baseline;
+  }
 
-abbr,
-ins {
-    text-decoration: none;
-}
+  .#{$m-prefix}abbr,
+  .#{$m-prefix}ins {
+      text-decoration: none;
+  }
 
-abbr {
-    border-bottom: 1px dotted $m-color;
-    cursor: help;
-}
+  .#{$m-prefix}abbr {
+      border-bottom: 1px dotted $m-color;
+      cursor: help;
+  }
 
-ins {
-    border-bottom: 1px dashed $m-color;
-}
+  .#{$m-prefix}ins {
+      border-bottom: 1px dashed $m-color;
+  }
 
-b,
-strong {
-    font-weight: bolder;
-}
+  .#{$m-prefix}b,
+  .#{$m-prefix}strong {
+      font-weight: bolder;
+  }
 
-dfn {
-    font-style: italic;
-}
+  .#{$m-prefix}dfn {
+      font-style: italic;
+  }
 
-small {
-    font-size: 0.8em;
-}
+  .#{$m-prefix}small {
+      font-size: 0.8em;
+  }
 
-sub,
-sup {
-    font-size: 0.7em;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
+  .#{$m-prefix}sub,
+  .#{$m-prefix}sup {
+      font-size: 0.7em;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+  }
 
-sub {
-    bottom: -0.25em;
-}
+  .#{$m-prefix}sub {
+      bottom: -0.25em;
+  }
 
-sup {
-    top: -0.5em;
-}
+  .#{$m-prefix}sup {
+      top: -0.5em;
+  }
 
-code,
-kbd,
-pre,
-samp,
-var {
-    font-family: $m-code-family;
-    font-size: 1em;
-}
+  .#{$m-prefix}code,
+  .#{$m-prefix}kbd,
+  .#{$m-prefix}pre,
+  .#{$m-prefix}samp,
+  .#{$m-prefix}var {
+      font-family: $m-code-family;
+      font-size: 1em;
+  }
 
-pre {
-    display: block;
-    margin: 1em 0;
-    overflow: auto;
-    white-space: pre;
-}
+  .#{$m-prefix}pre {
+      display: block;
+      margin: 1em 0;
+      overflow: auto;
+      white-space: pre;
+  }
 
-hr {
-    border: none;
-    border-top: 1px solid $m-color;
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
+  .#{$m-prefix}hr {
+      border: none;
+      border-top: 1px solid $m-color;
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+  }
 
-img {
-    border-style: none;
-}
+  .#{$m-prefix}img {
+      border-style: none;
+  }
 
-svg {
-    fill: currentColor;
-}
+  .#{$m-prefix}svg {
+      fill: currentColor;
+  }
 
-svg:not(:root) {
-    overflow: hidden;
-}
+  .#{$m-prefix}svg:not(:root) {
+      overflow: hidden;
+  }
 
-button,
-input,
-textarea,
-select {
-    font-size: $m-font-size;
-    font-weight: normal;
-    margin: .1em 0;
-    padding: .4em .8em;
-    transition: $m-transition;
-}
+  .#{$m-prefix}button,
+  .#{$m-prefix}input,
+  .#{$m-prefix}textarea,
+  .#{$m-prefix}select {
+      font-size: $m-font-size;
+      font-weight: normal;
+      margin: .1em 0;
+      padding: .4em .8em;
+      transition: $m-transition;
+  }
 
-input,
-textarea,
-select {
-    background: transparent;
-    border: 1px solid lighten($m-color, 50);
-    border-radius: 1px;
-    &:focus,
-    &:hover {
-        border-color: $m-color;
-        outline: none;
-    }
-}
+  .#{$m-prefix}input,
+  .#{$m-prefix}textarea,
+  .#{$m-prefix}select {
+      background: transparent;
+      border: 1px solid lighten($m-color, 50);
+      border-radius: 1px;
+      &:focus,
+      &:hover {
+          border-color: $m-color;
+          outline: none;
+      }
+  }
 
-select {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: textfield;
-    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(-45deg, transparent 50%, gray 50%);
-    background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
-    background-size: 5px 5px, 5px 5px;
-    background-repeat: no-repeat;
-}
+  .#{$m-prefix}select {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: textfield;
+      background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(-45deg, transparent 50%, gray 50%);
+      background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+  }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    appearance: auto;
-    -moz-appearance: button;
-    -webkit-appearance: button;
-    background: $m-color;
-    border: 1px solid $m-color;
-    color: $m-background;
-    cursor: pointer;
-    &:focus,
-    &:hover {
-        background: darken($m-color, 50);
-        border-color: darken($m-color, 100);
-        color: $m-background;
-        outline: none;
-    }
-}
+  .#{$m-prefix}button,
+  .#{$m-prefix}input[type="button"],
+  .#{$m-prefix}input[type="reset"],
+  .#{$m-prefix}input[type="submit"] {
+      appearance: auto;
+      -moz-appearance: button;
+      -webkit-appearance: button;
+      background: $m-color;
+      border: 1px solid $m-color;
+      color: $m-background;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+          background: darken($m-color, 50);
+          border-color: darken($m-color, 100);
+          color: $m-background;
+          outline: none;
+      }
+  }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner,
-textarea::-moz-focus-inner,
-select::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
+  .#{$m-prefix}button::-moz-focus-inner,
+  .#{$m-prefix}input::-moz-focus-inner,
+  .#{$m-prefix}textarea::-moz-focus-inner,
+  .#{$m-prefix}select::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+  }
 
-fieldset {
-    border: 1px solid $m-color;
-    margin: 0;
-    padding: 0.35em 0.7em 0.7em;
-}
+  .#{$m-prefix}fieldset {
+      border: 1px solid $m-color;
+      margin: 0;
+      padding: 0.35em 0.7em 0.7em;
+  }
 
-input[type="checkbox"],
-input[type="radio"] {
-    padding: 0;
-}
+  .#{$m-prefix}input[type="checkbox"],
+  .#{$m-prefix}input[type="radio"] {
+      padding: 0;
+  }
 
-input[type="number"] {
-    width: auto;
-}
+  .#{$m-prefix}input[type="number"] {
+      width: auto;
+  }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
+  .#{$m-prefix}input[type="number"]::-webkit-inner-spin-button,
+  .#{$m-prefix}input[type="number"]::-webkit-outer-spin-button {
+      height: auto;
+  }
 
-input[type="search"] {
-    appearance: auto;
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-}
+  .#{$m-prefix}input[type="search"] {
+      appearance: auto;
+      -moz-appearance: textfield;
+      -webkit-appearance: textfield;
+  }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
+  .#{$m-prefix}input[type="search"]::-webkit-search-cancel-button,
+  .#{$m-prefix}input[type="search"]::-webkit-search-decoration {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+  }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+  .#{$m-prefix}table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
 
-template {
-    display: none;
-}
+  .#{$m-prefix}template {
+      display: none;
+  }
 
-.bussy,
-[aria-busy="true"] {
-    cursor: progress;
-}
+  .#{$m-prefix}bussy,
+  .#{$m-prefix}[aria-busy="true"] {
+      cursor: progress;
+  }
 
-.controls,
-[aria-controls] {
-    cursor: pointer;
-}
+  .#{$m-prefix}controls,
+  .#{$m-prefix}[aria-controls] {
+      cursor: pointer;
+  }
 
-.disabled,
-[aria-disabled],
-[disabled],
-[disabled]:active,
-[disabled]:focus,
-[disabled]:hover {
-    cursor: default;
-    opacity: 0.5;
-    pointer-events: none;
-}
+  .#{$m-prefix}disabled,
+  .#{$m-prefix}[aria-disabled],
+  .#{$m-prefix}[disabled],
+  .#{$m-prefix}[disabled]:active,
+  .#{$m-prefix}[disabled]:focus,
+  .#{$m-prefix}[disabled]:hover {
+      cursor: default;
+      opacity: 0.5;
+      pointer-events: none;
+  }
 
-.hidden,
-[hidden] {
-    display: none !important;
-    pointer-events: none !important;
-}
+  .#{$m-prefix}hidden,
+  .#{$m-prefix}[hidden] {
+      display: none !important;
+      pointer-events: none !important;
+  }
 
-.readonly,
-[readonly] {
-    cursor: default !important;
-    pointer-events: none !important;
-}
+  .#{$m-prefix}readonly,
+  .#{$m-prefix}[readonly] {
+      cursor: default !important;
+      pointer-events: none !important;
+  }
 
-::-webkit-selection {
-    background-color: $m-color;
-    color: $m-background;
-    text-shadow: none;
+  .#{$m-prefix}::-webkit-selection {
+      background-color: $m-color;
+      color: $m-background;
+      text-shadow: none;
+  }
+  .#{$m-prefix}::-moz-selection {
+      background-color: $m-color;
+      color: $m-background;
+      text-shadow: none;
+  }
+  .#{$m-prefix}::selection {
+      background-color: $m-color;
+      color: $m-background;
+      text-shadow: none;
+  }
+
 }
-::-moz-selection {
-    background-color: $m-color;
-    color: $m-background;
-    text-shadow: none;
-}
-::selection {
-    background-color: $m-color;
-    color: $m-background;
-    text-shadow: none;
+@else {
+  html {
+      box-sizing: border-box;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+      background: $m-background;
+      color: $m-color;
+      font-family: $m-font-family;
+      font-size: $m-font-size;
+      line-height: $m-line-height;
+      margin: 0;
+      padding: 0;
+      text-rendering: optimizeLegibility;
+  }
+
+  a {
+      background-color: transparent;
+      cursor: pointer;
+      touch-action: manipulation;
+      -ms-touch-action: manipulation;
+      transition: $m-transition;
+      &:active,
+      &:hover,
+      &:focus {
+          outline-width: 0;
+      }
+  }
+
+  article,
+  aside,
+  blockquote,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  main,
+  menu,
+  nav,
+  section {
+      display: block;
+  }
+
+  summary {
+      color: lighten($m-color, 40);
+      cursor: pointer;
+      display: list-item;
+      font-size: $m-font-size;
+      transition: $m-transition;
+      &:focus,
+      &:hover {
+          color: $m-color;
+          font-size: $m-font-size * 1.2;
+          outline: none;
+      }
+  }
+
+  blockquote,
+  figure {
+      margin: $m-line-height * 1.5;
+  }
+
+  figcaption {
+      font-size: .8em;
+  }
+
+  audio,
+  canvas,
+  progress,
+  video {
+      display: inline-block;
+  }
+  audio:not([controls]) {
+      display: none;
+      height: 0;
+  }
+
+  audio,
+  canvas,
+  iframe,
+  video {
+      vertical-align: middle;
+  }
+
+  progress {
+      vertical-align: baseline;
+  }
+
+  abbr,
+  ins {
+      text-decoration: none;
+  }
+
+  abbr {
+      border-bottom: 1px dotted $m-color;
+      cursor: help;
+  }
+
+  ins {
+      border-bottom: 1px dashed $m-color;
+  }
+
+  b,
+  strong {
+      font-weight: bolder;
+  }
+
+  dfn {
+      font-style: italic;
+  }
+
+  small {
+      font-size: 0.8em;
+  }
+
+  sub,
+  sup {
+      font-size: 0.7em;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+  }
+
+  sub {
+      bottom: -0.25em;
+  }
+
+  sup {
+      top: -0.5em;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp,
+  var {
+      font-family: $m-code-family;
+      font-size: 1em;
+  }
+
+  pre {
+      display: block;
+      margin: 1em 0;
+      overflow: auto;
+      white-space: pre;
+  }
+
+  hr {
+      border: none;
+      border-top: 1px solid $m-color;
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+  }
+
+  img {
+      border-style: none;
+  }
+
+  svg {
+      fill: currentColor;
+  }
+
+  svg:not(:root) {
+      overflow: hidden;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+      font-size: $m-font-size;
+      font-weight: normal;
+      margin: .1em 0;
+      padding: .4em .8em;
+      transition: $m-transition;
+  }
+
+  input,
+  textarea,
+  select {
+      background: transparent;
+      border: 1px solid lighten($m-color, 50);
+      border-radius: 1px;
+      &:focus,
+      &:hover {
+          border-color: $m-color;
+          outline: none;
+      }
+  }
+
+  select {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: textfield;
+      background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(-45deg, transparent 50%, gray 50%);
+      background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+  }
+
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+      appearance: auto;
+      -moz-appearance: button;
+      -webkit-appearance: button;
+      background: $m-color;
+      border: 1px solid $m-color;
+      color: $m-background;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+          background: darken($m-color, 50);
+          border-color: darken($m-color, 100);
+          color: $m-background;
+          outline: none;
+      }
+  }
+
+  button::-moz-focus-inner,
+  input::-moz-focus-inner,
+  textarea::-moz-focus-inner,
+  select::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+  }
+
+  fieldset {
+      border: 1px solid $m-color;
+      margin: 0;
+      padding: 0.35em 0.7em 0.7em;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+      padding: 0;
+  }
+
+  input[type="number"] {
+      width: auto;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+      height: auto;
+  }
+
+  input[type="search"] {
+      appearance: auto;
+      -moz-appearance: textfield;
+      -webkit-appearance: textfield;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+  }
+
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+
+  template {
+      display: none;
+  }
+
+  .bussy,
+  [aria-busy="true"] {
+      cursor: progress;
+  }
+
+  .controls,
+  [aria-controls] {
+      cursor: pointer;
+  }
+
+  .disabled,
+  [aria-disabled],
+  [disabled],
+  [disabled]:active,
+  [disabled]:focus,
+  [disabled]:hover {
+      cursor: default;
+      opacity: 0.5;
+      pointer-events: none;
+  }
+
+  .hidden,
+  [hidden] {
+      display: none !important;
+      pointer-events: none !important;
+  }
+
+  .readonly,
+  [readonly] {
+      cursor: default !important;
+      pointer-events: none !important;
+  }
+
+  ::-webkit-selection {
+      background-color: $m-color;
+      color: $m-background;
+      text-shadow: none;
+  }
+  ::-moz-selection {
+      background-color: $m-color;
+      color: $m-background;
+      text-shadow: none;
+  }
+  ::selection {
+      background-color: $m-color;
+      color: $m-background;
+      text-shadow: none;
+  }
+
 }
