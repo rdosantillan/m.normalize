@@ -13,7 +13,9 @@ ___
 You need had installed [sass](https://sass-lang.com/install)
 
 #### Understand the files
-Under `_vars.scss` have a few list of vars to set general style. There is a special var for add a prefix to each tag `$m-prefix` but if you left set on `null` all styles will be affect directly to html tags.
+Under `_vars.scss` have a few list of vars to set general style.
+
+There is two special vars for convert all tags in to classes `$m-prefix-each` and add a prefix `$m-prefix`, if you left set `$m-prefix` to `null` all styles will be affect directly to html tags, and if `$m-prefix-each` is set to `false` it only create one main class that will be normalize all tags inside.
 
 The `_normalize.scss` is the main and only file that have all rules.
 
