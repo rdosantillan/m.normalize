@@ -11,7 +11,7 @@
     font-family: $m-font-family;
     font-size: $m-font-size;
     line-height: $m-line-height;
-    font-weight: $m-line-weight;
+    font-weight: $m-font-weight;
 }
 
 %m-interact-base {
@@ -47,6 +47,45 @@
             box-sizing: border-box;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                padding: 0;
+                line-height: 1;
+            }
+
+            h1 {
+                font-size: $m-h-size * 3;
+                margin: $m-h-size * 3 0;
+            }
+            h2 {
+                font-size: $m-h-size * 2.5;
+                margin: $m-h-size * 2.7 0;
+            }
+            h3 {
+                font-size: $m-h-size * 2;
+                margin: $m-h-size * 2.2 0;
+            }
+            h4 {
+                font-size: $m-h-size * 1.4;
+                margin: $m-h-size * 1.8 0;
+            }
+            h5 {
+                font-size: $m-h-size * 1.2;
+                margin: $m-h-size * 1.4 0;
+            }
+            h6 {
+                font-size: $m-h-size;
+                margin: $m-h-size * 1.2 0;
+            }
+
+            p {
+                @extend %m-font-base;
+            }
 
             a {
                 @extend %m-interact-base;
@@ -347,8 +386,34 @@
         .#{$m-prefix}h5,
         .#{$m-prefix}h6 {
             font-family: $m-font-family;
-            line-height: $m-line-height;
+            padding: 0;
+            line-height: 1;
             text-rendering: optimizeLegibility;
+        }
+
+        .#{$m-prefix}h1 {
+            font-size: $m-h-size * 3;
+            margin: $m-h-size * 3 0;
+        }
+        .#{$m-prefix}h2 {
+            font-size: $m-h-size * 2.5;
+            margin: $m-h-size * 2.7 0;
+        }
+        .#{$m-prefix}h3 {
+            font-size: $m-h-size * 2;
+            margin: $m-h-size * 2.2 0;
+        }
+        .#{$m-prefix}h4 {
+            font-size: $m-h-size * 1.4;
+            margin: $m-h-size * 1.8 0;
+        }
+        .#{$m-prefix}h5 {
+            font-size: $m-h-size * 1.2;
+            margin: $m-h-size * 1.4 0;
+        }
+        .#{$m-prefix}h6 {
+            font-size: $m-h-size;
+            margin: $m-h-size * 1.2 0;
         }
 
         .#{$m-prefix}p {
@@ -665,6 +730,45 @@
         margin: 0;
         padding: 0;
         text-rendering: optimizeLegibility;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0;
+        line-height: 1;
+    }
+
+    h1 {
+        font-size: $m-h-size * 3;
+        margin: $m-h-size * 3 0;
+    }
+    h2 {
+        font-size: $m-h-size * 2.5;
+        margin: $m-h-size * 2.7 0;
+    }
+    h3 {
+        font-size: $m-h-size * 2;
+        margin: $m-h-size * 2.2 0;
+    }
+    h4 {
+        font-size: $m-h-size * 1.4;
+        margin: $m-h-size * 1.8 0;
+    }
+    h5 {
+        font-size: $m-h-size * 1.2;
+        margin: $m-h-size * 1.4 0;
+    }
+    h6 {
+        font-size: $m-h-size;
+        margin: $m-h-size * 1.2 0;
+    }
+
+    p {
+        @extend %m-font-base;
     }
 
     a {
