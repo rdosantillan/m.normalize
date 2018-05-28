@@ -4,13 +4,13 @@
  * MIT License
  * https://github.com/flkt-crnpio/m.normalize
  */
-body, summary, button,
+body, p, summary, button,
 input,
 textarea,
 select {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.5;
   font-weight: normal;
 }
 
@@ -50,6 +50,46 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 54px;
+  margin: 54px 0;
+}
+
+h2 {
+  font-size: 45px;
+  margin: 48.6px 0;
+}
+
+h3 {
+  font-size: 36px;
+  margin: 39.6px 0;
+}
+
+h4 {
+  font-size: 25.2px;
+  margin: 32.4px 0;
+}
+
+h5 {
+  font-size: 21.6px;
+  margin: 25.2px 0;
+}
+
+h6 {
+  font-size: 18px;
+  margin: 21.6px 0;
+}
+
 a {
   background-color: transparent;
 }
@@ -79,7 +119,7 @@ summary:focus, summary:hover {
 
 blockquote,
 figure {
-  margin: 1.95;
+  margin: 2.25;
 }
 
 figcaption {
