@@ -75,6 +75,7 @@
             a {
                 @extend %m-interact-base;
                 background-color: transparent;
+                font-size: inherit;
             }
 
             article,
@@ -409,6 +410,7 @@
         .#{$m-prefix}-a {
             @extend %m-interact-base;
             background-color: transparent;
+            font-size: inherit;
         }
 
         .#{$m-prefix}-block,
@@ -755,6 +757,7 @@
     a {
         @extend %m-interact-base;
         background-color: transparent;
+        font-size: inherit;
     }
 
     article,

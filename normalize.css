@@ -86,6 +86,7 @@ h6 {
 
 a {
   background-color: transparent;
+  font-size: inherit;
 }
 
 article,
