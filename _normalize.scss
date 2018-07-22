@@ -314,12 +314,12 @@
 
             .bussy,
             [aria-busy="true"] {
-                cursor: progress;
+                cursor: progress !important;
             }
 
             .controls,
             [aria-controls] {
-                cursor: pointer;
+                cursor: pointer !important;
             }
 
             .disabled,
@@ -328,9 +328,9 @@
             [disabled]:active,
             [disabled]:focus,
             [disabled]:hover {
-                cursor: default;
-                opacity: 0.5;
-                pointer-events: none;
+                cursor: default !important;
+                opacity: 0.5 !important;
+                pointer-events: none !important;
             }
 
             .hidden,
@@ -655,12 +655,12 @@
 
         .#{$m-prefix}-bussy,
         .#{$m-prefix}-[aria-busy="true"] {
-            cursor: progress;
+            cursor: progress !important;
         }
 
         .#{$m-prefix}-controls,
         .#{$m-prefix}-[aria-controls] {
-            cursor: pointer;
+            cursor: pointer !important;
         }
 
         .#{$m-prefix}-disabled,
@@ -669,9 +669,9 @@
         .#{$m-prefix}-[disabled]:active,
         .#{$m-prefix}-[disabled]:focus,
         .#{$m-prefix}-[disabled]:hover {
-            cursor: default;
-            opacity: 0.5;
-            pointer-events: none;
+            cursor: default !important;
+            opacity: 0.5 !important;
+            pointer-events: none !important;
         }
 
         .#{$m-prefix}-hidden,
@@ -999,12 +999,12 @@
 
     .bussy,
     [aria-busy="true"] {
-        cursor: progress;
+        cursor: progress !important;
     }
 
     .controls,
     [aria-controls] {
-        cursor: pointer;
+        cursor: pointer !important;
     }
 
     .disabled,
@@ -1013,9 +1013,9 @@
     [disabled]:active,
     [disabled]:focus,
     [disabled]:hover {
-        cursor: default;
-        opacity: 0.5;
-        pointer-events: none;
+        cursor: default !important;
+        opacity: 0.5 !important;
+        pointer-events: none !important;
     }
 
     .hidden,
