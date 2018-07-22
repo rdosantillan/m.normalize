@@ -226,7 +226,6 @@ button,
 input,
 textarea,
 select {
-  margin: .1em 0;
   padding: .4em .8em;
 }
 
@@ -283,7 +282,6 @@ input::-moz-focus-inner,
 textarea::-moz-focus-inner,
 select::-moz-focus-inner {
   border: 0;
-  padding: 0;
 }
 
 fieldset {

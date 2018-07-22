@@ -218,7 +218,6 @@
             select {
                 @extend %m-font-base;
                 @extend %m-interact-base;
-                margin: .1em 0;
                 padding: .4em .8em;
             }
 
@@ -267,7 +266,6 @@
             textarea::-moz-focus-inner,
             select::-moz-focus-inner {
                 border: 0;
-                padding: 0;
             }
 
             fieldset {
@@ -559,7 +557,6 @@
         .#{$m-prefix}-select {
             @extend %m-font-base;
             @extend %m-interact-base;
-            margin: .1em 0;
             padding: .4em .8em;
         }
 
@@ -608,7 +605,6 @@
         .#{$m-prefix}-textarea::-moz-focus-inner,
         .#{$m-prefix}-select::-moz-focus-inner {
             border: 0;
-            padding: 0;
         }
 
         .#{$m-prefix}-fieldset {
@@ -903,7 +899,6 @@
     select {
         @extend %m-font-base;
         @extend %m-interact-base;
-        margin: .1em 0;
         padding: .4em .8em;
     }
 
@@ -952,7 +947,6 @@
     textarea::-moz-focus-inner,
     select::-moz-focus-inner {
         border: 0;
-        padding: 0;
     }
 
     fieldset {
