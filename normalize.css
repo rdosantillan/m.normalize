@@ -1,5 +1,5 @@
 /*
- * mNormalize v1.1.1
+ * mNormalize v1.1.2
  * Custom Normalize File for M projects
  * MIT License
  * https://github.com/flkt-crnpio/m.normalize
@@ -62,36 +62,31 @@ h6 {
 
 h1 {
   font-size: 54px;
-  margin: 54px 0;
 }
 
 h2 {
   font-size: 45px;
-  margin: 48.6px 0;
 }
 
 h3 {
   font-size: 36px;
-  margin: 39.6px 0;
 }
 
 h4 {
   font-size: 25.2px;
-  margin: 32.4px 0;
 }
 
 h5 {
   font-size: 21.6px;
-  margin: 25.2px 0;
 }
 
 h6 {
   font-size: 18px;
-  margin: 21.6px 0;
 }
 
 a {
   background-color: transparent;
+  font-size: inherit;
 }
 
 article,
@@ -232,7 +227,6 @@ button,
 input,
 textarea,
 select {
-  margin: .1em 0;
   padding: .4em .8em;
 }
 
@@ -289,7 +283,6 @@ input::-moz-focus-inner,
 textarea::-moz-focus-inner,
 select::-moz-focus-inner {
   border: 0;
-  padding: 0;
 }
 
 fieldset {
@@ -336,12 +329,12 @@ template {
 
 .bussy,
 [aria-busy="true"] {
-  cursor: progress;
+  cursor: progress !important;
 }
 
 .controls,
 [aria-controls] {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .disabled,
@@ -350,9 +343,9 @@ template {
 [disabled]:active,
 [disabled]:focus,
 [disabled]:hover {
-  cursor: default;
-  opacity: 0.5;
-  pointer-events: none;
+  cursor: default !important;
+  opacity: 0.5 !important;
+  pointer-events: none !important;
 }
 
 .hidden,

@@ -51,27 +51,21 @@
 
             h1 {
                 font-size: $m-h-size * 3;
-                margin: $m-h-size * 3 0;
             }
             h2 {
                 font-size: $m-h-size * 2.5;
-                margin: $m-h-size * 2.7 0;
             }
             h3 {
                 font-size: $m-h-size * 2;
-                margin: $m-h-size * 2.2 0;
             }
             h4 {
                 font-size: $m-h-size * 1.4;
-                margin: $m-h-size * 1.8 0;
             }
             h5 {
                 font-size: $m-h-size * 1.2;
-                margin: $m-h-size * 1.4 0;
             }
             h6 {
                 font-size: $m-h-size;
-                margin: $m-h-size * 1.2 0;
             }
 
             p {
@@ -81,6 +75,7 @@
             a {
                 @extend %m-interact-base;
                 background-color: transparent;
+                font-size: inherit;
             }
 
             article,
@@ -224,7 +219,6 @@
             select {
                 @extend %m-font-base;
                 @extend %m-interact-base;
-                margin: .1em 0;
                 padding: .4em .8em;
             }
 
@@ -273,7 +267,6 @@
             textarea::-moz-focus-inner,
             select::-moz-focus-inner {
                 border: 0;
-                padding: 0;
             }
 
             fieldset {
@@ -320,12 +313,12 @@
 
             .bussy,
             [aria-busy="true"] {
-                cursor: progress;
+                cursor: progress !important;
             }
 
             .controls,
             [aria-controls] {
-                cursor: pointer;
+                cursor: pointer !important;
             }
 
             .disabled,
@@ -334,9 +327,9 @@
             [disabled]:active,
             [disabled]:focus,
             [disabled]:hover {
-                cursor: default;
-                opacity: 0.5;
-                pointer-events: none;
+                cursor: default !important;
+                opacity: 0.5 !important;
+                pointer-events: none !important;
             }
 
             .hidden,
@@ -393,27 +386,21 @@
 
         .#{$m-prefix}-h1 {
             font-size: $m-h-size * 3;
-            margin: $m-h-size * 3 0;
         }
         .#{$m-prefix}-h2 {
             font-size: $m-h-size * 2.5;
-            margin: $m-h-size * 2.7 0;
         }
         .#{$m-prefix}-h3 {
             font-size: $m-h-size * 2;
-            margin: $m-h-size * 2.2 0;
         }
         .#{$m-prefix}-h4 {
             font-size: $m-h-size * 1.4;
-            margin: $m-h-size * 1.8 0;
         }
         .#{$m-prefix}-h5 {
             font-size: $m-h-size * 1.2;
-            margin: $m-h-size * 1.4 0;
         }
         .#{$m-prefix}-h6 {
             font-size: $m-h-size;
-            margin: $m-h-size * 1.2 0;
         }
 
         .#{$m-prefix}-p {
@@ -423,6 +410,7 @@
         .#{$m-prefix}-a {
             @extend %m-interact-base;
             background-color: transparent;
+            font-size: inherit;
         }
 
         .#{$m-prefix}-block,
@@ -571,7 +559,6 @@
         .#{$m-prefix}-select {
             @extend %m-font-base;
             @extend %m-interact-base;
-            margin: .1em 0;
             padding: .4em .8em;
         }
 
@@ -620,7 +607,6 @@
         .#{$m-prefix}-textarea::-moz-focus-inner,
         .#{$m-prefix}-select::-moz-focus-inner {
             border: 0;
-            padding: 0;
         }
 
         .#{$m-prefix}-fieldset {
@@ -667,12 +653,12 @@
 
         .#{$m-prefix}-bussy,
         .#{$m-prefix}-[aria-busy="true"] {
-            cursor: progress;
+            cursor: progress !important;
         }
 
         .#{$m-prefix}-controls,
         .#{$m-prefix}-[aria-controls] {
-            cursor: pointer;
+            cursor: pointer !important;
         }
 
         .#{$m-prefix}-disabled,
@@ -681,9 +667,9 @@
         .#{$m-prefix}-[disabled]:active,
         .#{$m-prefix}-[disabled]:focus,
         .#{$m-prefix}-[disabled]:hover {
-            cursor: default;
-            opacity: 0.5;
-            pointer-events: none;
+            cursor: default !important;
+            opacity: 0.5 !important;
+            pointer-events: none !important;
         }
 
         .#{$m-prefix}-hidden,
@@ -747,27 +733,21 @@
 
     h1 {
         font-size: $m-h-size * 3;
-        margin: $m-h-size * 3 0;
     }
     h2 {
         font-size: $m-h-size * 2.5;
-        margin: $m-h-size * 2.7 0;
     }
     h3 {
         font-size: $m-h-size * 2;
-        margin: $m-h-size * 2.2 0;
     }
     h4 {
         font-size: $m-h-size * 1.4;
-        margin: $m-h-size * 1.8 0;
     }
     h5 {
         font-size: $m-h-size * 1.2;
-        margin: $m-h-size * 1.4 0;
     }
     h6 {
         font-size: $m-h-size;
-        margin: $m-h-size * 1.2 0;
     }
 
     p {
@@ -777,6 +757,7 @@
     a {
         @extend %m-interact-base;
         background-color: transparent;
+        font-size: inherit;
     }
 
     article,
@@ -921,7 +902,6 @@
     select {
         @extend %m-font-base;
         @extend %m-interact-base;
-        margin: .1em 0;
         padding: .4em .8em;
     }
 
@@ -970,7 +950,6 @@
     textarea::-moz-focus-inner,
     select::-moz-focus-inner {
         border: 0;
-        padding: 0;
     }
 
     fieldset {
@@ -1017,12 +996,12 @@
 
     .bussy,
     [aria-busy="true"] {
-        cursor: progress;
+        cursor: progress !important;
     }
 
     .controls,
     [aria-controls] {
-        cursor: pointer;
+        cursor: pointer !important;
     }
 
     .disabled,
@@ -1031,9 +1010,9 @@
     [disabled]:active,
     [disabled]:focus,
     [disabled]:hover {
-        cursor: default;
-        opacity: 0.5;
-        pointer-events: none;
+        cursor: default !important;
+        opacity: 0.5 !important;
+        pointer-events: none !important;
     }
 
     .hidden,
